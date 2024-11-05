@@ -5,8 +5,15 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 3.0f;
+
     public int maxHealth = 5;
+    public float timeInvincible = 2;
+
+    public int health { get { return currentHealth; } }
     int currentHealth;
+
+    bool isInvincible;
+    float invincibleTimer;
 
 
     Rigidbody2D rigidbody2D;
@@ -27,6 +34,16 @@ public class PlayerController : MonoBehaviour
     {
          horizontal = Input.GetAxis("Horizontal");
          vertical = Input.GetAxis("Vertical");
+
+         if(isInvincible)
+         {
+            invincibleTimer -= Time.deltaTime;
+            if (isInvincibleTimer < 0)
+            {
+                isInvincible = false;
+
+            }
+         }
 
         
     }
