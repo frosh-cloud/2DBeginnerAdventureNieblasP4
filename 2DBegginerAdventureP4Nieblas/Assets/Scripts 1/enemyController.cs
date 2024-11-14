@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.ShaderGraph.Drawing.Inspector.PropertyDrawers;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -14,12 +15,14 @@ public class enemyController : MonoBehaviour
     float timer;
     int direction = 1;
 
+    Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         timer = changeTime;
-        
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -38,10 +41,14 @@ public class enemyController : MonoBehaviour
         Vector2 position = rigidbody2D.position;
         if (vertical)
         {
+            animator.SetFloat("Move X", 0);
+            animator.SetFloat("Move Y", direction);
             position.y = position.y + Time.deltaTime + speed * direction;
         }
         else
         {
+            animator.SetFloat("Move X", direction);
+            animator.SetFloat("Move y", 0);
             position.x = position.x + Time.deltaTime * speed * direction;
         }
 
