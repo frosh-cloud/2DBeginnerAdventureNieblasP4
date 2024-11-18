@@ -62,7 +62,10 @@ public class PlayerController : MonoBehaviour
 
             }
         }
-
+        if(Input.GetKeyDown(KeyCode.C))
+        {
+            launch();
+        }
 
     }
     void FixedUpdate()
@@ -97,6 +100,8 @@ public class PlayerController : MonoBehaviour
 
         Projectile projectile = projectileObject.GetComponent<Projectile>();
         projectile.Launch(lookDirection, 300);
+
+        animator.SetTrigger("Launch");
     }
 }
    
