@@ -25739,7 +25739,7 @@ Animator:
   m_GameObject: {fileID: 697187814}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3adc86cdb032ad64cb47a42d15803062, type: 2}
+  m_Controller: {fileID: 9100000, guid: 34d36e1bead33a942930d6f3d41aa8fa, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -26902,7 +26902,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 26.512436
+  orthographic size: 22.155134
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
