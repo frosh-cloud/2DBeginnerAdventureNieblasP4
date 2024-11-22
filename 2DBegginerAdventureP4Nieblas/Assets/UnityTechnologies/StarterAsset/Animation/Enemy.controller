@@ -1,6 +1,28 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!206 &-8832256059868671707
+--- !u!1107 &-8585447342880222760
+AnimatorStateMachine:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Base Layer
+  m_ChildStates:
+  - serializedVersion: 1
+    m_State: {fileID: 3392215646123604853}
+    m_Position: {x: 600, y: 40, z: 0}
+  m_ChildStateMachines: []
+  m_AnyStateTransitions: []
+  m_EntryTransitions: []
+  m_StateMachineTransitions: {}
+  m_StateMachineBehaviours: []
+  m_AnyStatePosition: {x: 50, y: 20, z: 0}
+  m_EntryPosition: {x: 50, y: 120, z: 0}
+  m_ExitPosition: {x: 800, y: 120, z: 0}
+  m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
+  m_DefaultState: {fileID: 3392215646123604853}
+--- !u!206 &-1482906526490273388
 BlendTree:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,7 +31,7 @@ BlendTree:
   m_Name: Blend Tree
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: cd5fe5f76a9f1f14b9f5101c63d39c21, type: 2}
+    m_Motion: {fileID: 7400000, guid: ba8441c08c3d7774897e00eef4c2dfd4, type: 2}
     m_Threshold: 0
     m_Position: {x: -0.5, y: 0}
     m_TimeScale: 1
@@ -17,7 +39,7 @@ BlendTree:
     m_DirectBlendParameter: Move X
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 67141fb00afae8f4f9380a297c34bae2, type: 2}
+    m_Motion: {fileID: 7400000, guid: 877230df77dcff34d91ff926dfacbf78, type: 2}
     m_Threshold: 0.33333334
     m_Position: {x: 0.5, y: 0}
     m_TimeScale: 1
@@ -25,7 +47,7 @@ BlendTree:
     m_DirectBlendParameter: Move X
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 0}
+    m_Motion: {fileID: 7400000, guid: 42a601687202f394989bfccb90f1947d, type: 2}
     m_Threshold: 0.6666667
     m_Position: {x: 0, y: 0.5}
     m_TimeScale: 1
@@ -33,7 +55,7 @@ BlendTree:
     m_DirectBlendParameter: Move X
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 0}
+    m_Motion: {fileID: 7400000, guid: f89b245e6630eb743ac08754eab4fba6, type: 2}
     m_Threshold: 1
     m_Position: {x: 0, y: -0.5}
     m_TimeScale: 1
@@ -47,64 +69,13 @@ BlendTree:
   m_UseAutomaticThresholds: 1
   m_NormalizedBlendValues: 0
   m_BlendType: 1
---- !u!1102 &-5202661080238989507
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Robot_fixed
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: d39853d3d265d2447b257a70fea1c036, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
---- !u!1107 &-4651350672397237806
-AnimatorStateMachine:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Base Layer
-  m_ChildStates:
-  - serializedVersion: 1
-    m_State: {fileID: 1883889901151898479}
-    m_Position: {x: 360.31842, y: 133.14267, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: -5202661080238989507}
-    m_Position: {x: 395.31842, y: 198.14267, z: 0}
-  m_ChildStateMachines: []
-  m_AnyStateTransitions: []
-  m_EntryTransitions: []
-  m_StateMachineTransitions: {}
-  m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 50, y: 20, z: 0}
-  m_EntryPosition: {x: 50, y: 120, z: 0}
-  m_ExitPosition: {x: 800, y: 120, z: 0}
-  m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 1883889901151898479}
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Robot
+  m_Name: Enemy
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Move X
@@ -122,7 +93,7 @@ AnimatorController:
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
-    m_StateMachine: {fileID: -4651350672397237806}
+    m_StateMachine: {fileID: -8585447342880222760}
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []
@@ -132,7 +103,7 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!1102 &1883889901151898479
+--- !u!1102 &3392215646123604853
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
@@ -152,7 +123,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -8832256059868671707}
+  m_Motion: {fileID: -1482906526490273388}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
